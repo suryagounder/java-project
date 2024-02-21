@@ -3,7 +3,7 @@ FROM openjdk:11
 WORKDIR /app
 
 # Copy multiple source files to the /app directory in the container
-COPY target/your-application.jar target/another-file.txt /app/
+COPY target/*.jar target/*.txt /app/
 
 # Expose the port your application will run on
 EXPOSE 8080
