@@ -1,14 +1,12 @@
-# Use your desired base image
 FROM openjdk:11
 
-# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the JAR file built by Maven into the container
-COPY target/*.jar app.jar
+# Copy multiple source files to the /app directory in the container
+COPY target/your-application.jar target/another-file.txt /app/
 
 # Expose the port your application will run on
 EXPOSE 8080
 
 # Command to run your application
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "your-application.jar"]
