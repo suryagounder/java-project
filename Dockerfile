@@ -9,4 +9,4 @@ COPY target/*.jar target/*.txt /app/
 EXPOSE 8080
 
 # Command to run your application
-CMD ["java", "-jar", "your-application.jar"]
+CMD ["java", "-jar", "*.jar"]
